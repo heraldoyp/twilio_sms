@@ -65,8 +65,16 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-                
-              
+                // Your image content that you willing to sent
+                // if (key === 'postcardURL'){
+                //     $('#postcard-url').val(val);
+                //     $('.postcard-preview-content').css('background-image', 'url')
+                // }
+
+                // if (key === 'postcardText'){
+                //     $('#postcard-text').val(val);
+                //     $('#postcard-preview-text').html($('#postcard-text').val());
+                // }
             });
         });
 
@@ -87,11 +95,17 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
+        // var postcardURLValue = $('#postcard-url').val();
+        // var postcardTextValue = $('#postcard-text').val();
+
+        var phoneNumberValue = $('#form-element-01').val();
+        var messageValue = $('#textarea-id-01').val();
 
         payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens
+            "tokens": authTokens,
+            // Argument (Contact.Attribute) => Attribute terkait dari inArgument
+            "phoneNumberValue": phoneNumberValue,
+            "messageValue": messageValue
         }];
         
         payload['metaData'].isConfigured = true;
@@ -99,6 +113,5 @@ define([
         console.log(payload);
         connection.trigger('updateActivity', payload);
     }
-
 
 });

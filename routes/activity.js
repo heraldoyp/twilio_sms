@@ -87,6 +87,20 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
+            // Debug attributes code
+            var request = require('request');
+            var url = "https://enfv9ennjfrf59v.m.pipedream.net"
+
+            request({
+                uri: url, 
+                method: 'POST',
+                json: decoded.inArguments[0]
+            }, function(error, response, body){
+                if(!error){
+                    console.log(body);
+                }
+            })
+
             logData(req);
             res.send(200, 'Execute');
         } else {
