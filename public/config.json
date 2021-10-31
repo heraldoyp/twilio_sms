@@ -8,14 +8,16 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Template",
+            "name": "Blendmedia SMS",
           "description": "A Template for a custom Journey Builder activity",
           "step1Label": "Configure Activity"
         }
     },
     "arguments": {
         "execute": {
-           "inArguments":[],
+           "inArguments":[
+
+           ],
           "outArguments": [],
           "url": "https://<your-domain-here>/journeybuilder/execute",
            "verb": "POST",
