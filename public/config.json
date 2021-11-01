@@ -3,7 +3,7 @@
     "metaData": {
         "icon": "images/icon.png",
         "iconSmall": "images/iconSmall.png",
-        "category": "message"
+        "category": "custom"
     },
     "type": "REST",
     "lang": {
@@ -16,7 +16,9 @@
     "arguments": {
         "execute": {
            "inArguments":[
-
+              {
+                "Customer ID": "{{Contact.Attribute.}}"
+              }
            ],
           "outArguments": [],
           "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/execute",
