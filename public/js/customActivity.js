@@ -28,7 +28,6 @@ define([
         connection.trigger('requestInteraction');
         connection.trigger('requestTriggerEventDefinition');
         connection.trigger('requestDataSources');  
-
     }
 
     function onRequestedDataSources(dataSources){
