@@ -94,25 +94,26 @@ exports.execute = function (req, res) {
             var decodedArgs = decoded.inArguments[0];
             
             // Debug attributes code
-            var request = require('request');
-            var url = "https://enfv9ennjfrf59v.m.pipedream.net"
-
-            request({
-                uri: url, 
-                method: 'POST',
-                json: req.body
-            }, function(error, response, body){
-                if(!error){
-                    console.log(body);
-                }
-            })
-
-            logData(req);
-            res.send(200, 'Execute');
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
         }
+
+        var request = require('request');
+        var url = "https://enfv9ennjfrf59v.m.pipedream.net"
+
+        request({
+            uri: url, 
+            method: 'POST',
+            json: req.body
+        }, function(error, response, body){
+            if(!error){
+                console.log(body);
+            }
+        })
+
+        logData(req);
+        res.send(200, 'Execute');
     });
 };
 
