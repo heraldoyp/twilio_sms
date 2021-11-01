@@ -15,11 +15,7 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[
-              {
-                "Customer ID": "{{Contact.Attribute.}}"
-              }
-           ],
+           "inArguments":[],
           "outArguments": [],
           "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
