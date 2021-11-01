@@ -15,7 +15,7 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[],
+          "inArguments":[],
           "outArguments": [],
           "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
@@ -27,7 +27,6 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "5a23ceb8-f371-4d3d-89fd-20f26dd4aa46",
       "save": {
         "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/save",
           "verb": "POST",
@@ -54,8 +53,8 @@
     ],
     "userInterfaces": {
         "configModal": {
-            "height": 400,
-            "width": 1000,
+          "height": 400,
+          "width": 1000,
           "fullscreen": false
         }
     },
