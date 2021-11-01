@@ -24,10 +24,14 @@ exports.index = function(req, res){
 //     var request = require('request');
 //     var url = "https://enfv9ennjfrf59v.m.pipedream.net"
 
+//     var bodyValue = {
+//         "phoneNumberValue": "081218878964",
+//         "messageValue": "Ini hardcode test dari npm"
+//     }
 //     request({
 //         uri: url, 
 //         method: 'POST',
-//         json: req.body
+//         json: bodyValue
 //     }, function(error, response, body){
 //         if(!error){
 //             console.log(body);
