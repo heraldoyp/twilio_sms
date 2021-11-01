@@ -18,12 +18,12 @@
           "inArguments":[],
           "outArguments": [],
           "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/execute",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
+          "verb": "POST",
+          "body": "",
+          "header": "",
+          "format": "json",
+          "useJwt": true,
+          "timeout": 10000
         }
     },
     "configurationArguments": {

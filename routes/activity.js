@@ -80,41 +80,41 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
 
     // example on how to decode JWT
-    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+    // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
-        // verification error -> unauthorized request
-        if (err) {
-            console.error(err);
-            return res.status(401).end();
-        }
+    //     // verification error -> unauthorized request
+    //     if (err) {
+    //         console.error(err);
+    //         return res.status(401).end();
+    //     }
 
-        if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+    //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
-            // decoded in arguments
-            var decodedArgs = decoded.inArguments[0];
+    //         // decoded in arguments
+    //         var decodedArgs = decoded.inArguments[0];
             
-            // Debug attributes code
-        } else {
-            console.error('inArguments invalid.');
-            return res.status(400).end();
+    //         // Debug attributes code
+    //     } else {
+    //         console.error('inArguments invalid.');
+    //         return res.status(400).end();
+    //     }
+    // });
+
+    var request = require('request');
+    var url = "https://enfv9ennjfrf59v.m.pipedream.net"
+
+    request({
+        uri: url, 
+        method: 'POST',
+        json: req.body
+    }, function(error, response, body){
+        if(!error){
+            console.log(body);
         }
+    })
 
-        var request = require('request');
-        var url = "https://enfv9ennjfrf59v.m.pipedream.net"
-
-        request({
-            uri: url, 
-            method: 'POST',
-            json: req.body
-        }, function(error, response, body){
-            if(!error){
-                console.log(body);
-            }
-        })
-
-        logData(req);
-        res.send(200, 'Execute');
-    });
+    logData(req);
+    res.send(200, 'Execute');
 };
 
 
