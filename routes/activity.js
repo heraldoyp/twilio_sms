@@ -63,7 +63,13 @@ exports.edit = function (req, res) {
  */
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    console.log( req.body );
+    // var phoneNumberValue = document.getElementById("form-element-01");
+    // var messageValue = document.getElementById("textarea-id-01");
+
+    // console.log( req.body );
+    // console.log(phoneNumberValue);
+    // console.log(messageValue);
+    console.log( req.body)
     logData(req);
     res.send(200, 'Save');
 };

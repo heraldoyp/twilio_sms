@@ -75,6 +75,13 @@ define([
                 //     $('#postcard-text').val(val);
                 //     $('#postcard-preview-text').html($('#postcard-text').val());
                 // }
+                if (key === 'phoneNumberValue'){
+                    $('#form-element-01').val(val);
+                }
+
+                if(key === 'messageValue'){
+                    $('#textarea-id-01').val(val);
+                }
             });
         });
 

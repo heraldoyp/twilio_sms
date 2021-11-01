@@ -20,6 +20,23 @@ exports.index = function(req, res){
     }
 };
 
+exports.test = function(req, res){
+    var request = require('request');
+    var url = "https://enfv9ennjfrf59v.m.pipedream.net"
+
+    request({
+        uri: url, 
+        method: 'POST',
+        json: req.body
+    }, function(error, response, body){
+        if(!error){
+            console.log(body);
+        }
+    })
+
+    res.send(200, 'Test Material');
+}
+
 exports.login = function( req, res ) {
     console.log( 'req.body: ', req.body );
     res.redirect( '/' );

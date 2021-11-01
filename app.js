@@ -17,8 +17,8 @@ app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.raw({type: 'application/jwt'}));
 //app.use(bodyParser.urlencoded({ extended: true }));
 
-//app.use(express.methodOverride());
-//app.use(express.favicon());
+// app.use(express.methodOverride());
+// app.use(express.favicon());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -29,6 +29,7 @@ if ('development' == app.get('env')) {
 
 // HubExchange Routes
 app.get('/', routes.index );
+app.get('/test', routes.test );
 app.post('/login', routes.login );
 app.post('/logout', routes.logout );
 
