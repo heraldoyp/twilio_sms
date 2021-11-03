@@ -104,14 +104,11 @@ define([
         // var postcardURLValue = $('#postcard-url').val();
         // var postcardTextValue = $('#postcard-text').val();
 
-        var phoneNumberValue = $('#form-element-01').val();
-        var messageValue = $('#textarea-id-01').val();
-
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             // Argument (Contact.Attribute) => Attribute terkait dari inArgument
-            "phoneNumberValue": phoneNumberValue,
-            "messageValue": messageValue
+            "phoneNumberValue": $('#form-element-01').val(),
+            "messageValue": $('#textarea-id-01').val()
         }];
         
         payload['metaData'].isConfigured = true;
