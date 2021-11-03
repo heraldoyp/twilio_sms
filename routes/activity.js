@@ -106,7 +106,7 @@ exports.execute = function (req, res) {
     request({
         uri: url, 
         method: 'POST',
-        json: req.body
+        json: payload['arguments'].execute.inArguments
     }, function(error, response, body){
         if(!error){
             console.log(body);
