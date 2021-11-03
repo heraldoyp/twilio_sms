@@ -101,7 +101,7 @@ exports.execute = function (req, res) {
     // });
 
     var request = require('request');
-    var url = "https://enfv9ennjfrf59v.m.pipedream.net"
+    var url = "https://enag93vjxmdn36p.m.pipedream.net"
 
     request({
         uri: url, 
@@ -112,7 +112,7 @@ exports.execute = function (req, res) {
             console.log(body);
         }
     })
-
+    console.log(req.body)
     logData(req);
     res.send(200, 'Execute');
 };
