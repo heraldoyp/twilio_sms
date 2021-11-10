@@ -79,38 +79,53 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
 
-    // example on how to decode JWT
-    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+    // // example on how to decode JWT
+    // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
-        // verification error -> unauthorized request
-        if (err) {
-            console.error(err);
-            return res.status(401).end();
-        }
+    //     // verification error -> unauthorized request
+    //     if (err) {
+    //         console.error(err);
+    //         return res.status(401).end();
+    //     }
 
-        if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+    //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
-            // decoded in arguments
-            var decodedArgs = decoded.inArguments[0];
-            var request = require('request');
-            var url = "https://enag93vjxmdn36p.m.pipedream.net"
+    //         // decoded in arguments
+    //         var decodedArgs = decoded.inArguments[0];
+    //         var request = require('request');
+    //         var url = "https://enag93vjxmdn36p.m.pipedream.net"
 
-            request({
-                uri: url, 
-                method: 'POST',
-                json: decodedArgs
-            }, function(error, response, body){
-                if(!error){
-                    console.log(body);
-                }
-            })
+    //         request({
+    //             uri: url, 
+    //             method: 'POST',
+    //             json: decodedArgs
+    //         }, function(error, response, body){
+    //             if(!error){
+    //                 console.log(body);
+    //             }
+    //         })
             
-            // Debug attributes code
-        } else {
-            console.error('inArguments invalid.');
-            return res.status(400).end();
+    //         // Debug attributes code
+    //     } else {
+    //         console.error('inArguments invalid.');
+    //         return res.status(400).end();
+    //     }
+    // });
+
+    // decoded in arguments
+    // var decodedArgs = decoded.inArguments[0];
+    var request = require('request');
+    var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
+
+    request({
+        uri: url, 
+        method: 'POST',
+        json: req.body
+    }, function(error, response, body){
+        if(!error){
+            console.log(body);
         }
-    });
+    })
 
     console.log(req.body)
     logData(req);
