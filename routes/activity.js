@@ -112,22 +112,33 @@ exports.execute = function (req, res) {
     //     }
     // });
 
+    // var phoneNumberValue = document.getElementsById("form-element-01").value();
+    // var messageValue =  document.getElementsById("textarea-id-01").value();
+
+    var bodyData = {
+        "phoneNumberValue": ((req.body)? req.body.phoneNumberValue : document.getElementsById("form-element-01").value() ),
+        "messageValue": ((req.body)? req.body.messageValue : document.getElementsById("textarea-id-01").value())
+    }
     // decoded in arguments
     // var decodedArgs = decoded.inArguments[0];
     var request = require('request');
     var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
+    // var bodyData = {
+    //     "phoneNumberValue": "081218878469",
+    //     "messageValue": "ini dari App"
+    // }
 
     request({
         uri: url, 
         method: 'POST',
-        json: req.body
+        json: bodyData
     }, function(error, response, body){
         if(!error){
             console.log(body);
         }
     })
 
-    console.log(req.body)
+    console.log(bodyData)
     logData(req);
     res.send(200, 'Execute');
 };
