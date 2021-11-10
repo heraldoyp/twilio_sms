@@ -7,6 +7,32 @@ var activity = require('./activity');
  * GET home page.
  */
 exports.index = function(req, res){
+    // var inputPhoneNumberValue = document.querySelector("input");
+    // var inputMessageValue = document.querySelector("textarea");
+    // var logPhone = document.getElementById("logPhone");
+    // var logMessage = document.getElementById("logMessage");
+    // inputPhoneNumberValue.addEventListener('change', updatePhoneValue);
+    // inputMessageValue.addEventListener('change', updateMessageValue);
+
+    // function updatePhoneValue(e){
+    //     logPhone.textContext = e.target.value;
+    // }
+
+    // function updateMessageValue(e){
+    //     logMessage.textContext = e.target.value;
+    // }
+
+    // $(window).ready(onRender);
+    // var bodyData = {
+    //     "phoneNumberValue": document.getElementsById("form-element-01").value(),
+    //     "messageValue": document.getElementsById("textarea-id-01").value()
+    // }
+
+    // var bodyData = {
+    //     "phoneNumberValue": $('#form-element-01').val(),
+    //     "messageValue": $('#textarea-id-01').val()
+    // }
+
     if( !req.session.token ) {
         res.render( 'index', {
             title: 'Unauthenticated',

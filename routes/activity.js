@@ -29,23 +29,23 @@ function logData(req) {
         secure: req.secure,
         originalUrl: req.originalUrl
     });
-    console.log("body: " + util.inspect(req.body));
-    console.log("headers: " + req.headers);
-    console.log("trailers: " + req.trailers);
-    console.log("method: " + req.method);
-    console.log("url: " + req.url);
-    console.log("params: " + util.inspect(req.params));
-    console.log("query: " + util.inspect(req.query));
-    console.log("route: " + req.route);
-    console.log("cookies: " + req.cookies);
-    console.log("ip: " + req.ip);
-    console.log("path: " + req.path);
-    console.log("host: " + req.host);
-    console.log("fresh: " + req.fresh);
-    console.log("stale: " + req.stale);
-    console.log("protocol: " + req.protocol);
-    console.log("secure: " + req.secure);
-    console.log("originalUrl: " + req.originalUrl);
+    // console.log("body: " + util.inspect(req.body));
+    // console.log("headers: " + req.headers);
+    // console.log("trailers: " + req.trailers);
+    // console.log("method: " + req.method);
+    // console.log("url: " + req.url);
+    // console.log("params: " + util.inspect(req.params));
+    // console.log("query: " + util.inspect(req.query));
+    // console.log("route: " + req.route);
+    // console.log("cookies: " + req.cookies);
+    // console.log("ip: " + req.ip);
+    // console.log("path: " + req.path);
+    // console.log("host: " + req.host);
+    // console.log("fresh: " + req.fresh);
+    // console.log("stale: " + req.stale);
+    // console.log("protocol: " + req.protocol);
+    // console.log("secure: " + req.secure);
+    // console.log("originalUrl: " + req.originalUrl);
 }
 
 /*
@@ -115,30 +115,27 @@ exports.execute = function (req, res) {
     // var phoneNumberValue = document.getElementsById("form-element-01").value();
     // var messageValue =  document.getElementsById("textarea-id-01").value();
 
-    var bodyData = {
-        "phoneNumberValue": ((req.body)? req.body.phoneNumberValue : document.getElementsById("form-element-01").value() ),
-        "messageValue": ((req.body)? req.body.messageValue : document.getElementsById("textarea-id-01").value())
-    }
-    // decoded in arguments
-    // var decodedArgs = decoded.inArguments[0];
-    var request = require('request');
-    var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
     // var bodyData = {
-    //     "phoneNumberValue": "081218878469",
-    //     "messageValue": "ini dari App"
+    //     "phoneNumberValue": ((req.body)? req.body.phoneNumberValue : document.getElementsById("form-element-01").value() ),
+    //     "messageValue": ((req.body)? req.body.messageValue : document.getElementsById("textarea-id-01").value())
     // }
 
-    request({
-        uri: url, 
-        method: 'POST',
-        json: bodyData
-    }, function(error, response, body){
-        if(!error){
-            console.log(body);
-        }
-    })
+    // decoded in arguments
+    // var request = require('request');
+    // var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
 
-    console.log(bodyData)
+
+    // request({
+    //     uri: url, 
+    //     method: 'POST',
+    //     json: req.body
+    // }, function(error, response, body){
+    //     if(!error){
+    //         console.log(body);
+    //     }
+    // })
+
+    console.log(req.body)
     logData(req);
     res.send(200, 'Execute');
 };
