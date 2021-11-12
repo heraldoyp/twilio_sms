@@ -111,7 +111,10 @@ define([
             "tokens": authTokens,
             // Argument (Contact.Attribute) => Attribute terkait dari inArgument
             "phoneNumberValue": phoneNumberValue,
-            "messageValue": messageValue
+            "messageValue": messageValue,
+            "ContactKey": "{{Contact.Key}}",
+            "FirstName": "{{Contact.Attribute.WelcomeProgramJourney.FirstName}}",
+            "LastName": "{{Contact.Attribute.WelcomeProgramJourney.LastName}}"
         }];
         
         payload['metaData'].isConfigured = true;

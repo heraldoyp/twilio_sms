@@ -123,19 +123,19 @@ exports.execute = function (req, res) {
     console.log("EXECUTE FUNCTION START")
     console.log("=======================")
     // decoded in arguments
-    // var request = require('request');
-    // var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
+    var request = require('request');
+    var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
 
 
-    // request({
-    //     uri: url, 
-    //     method: 'POST',
-    //     json: req.body
-    // }, function(error, response, body){
-    //     if(!error){
-    //         console.log(body);
-    //     }
-    // })
+    request({
+        uri: url, 
+        method: 'POST',
+        json: req.body
+    }, function(error, response, body){
+        if(!error){
+            console.log(body);
+        }
+    })
 
     console.log(req.body)
     logData(req);
