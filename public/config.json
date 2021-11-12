@@ -21,7 +21,7 @@
             {"LastName": "{{Contact.Attribute.WelcomeProgramJourney.LastName}}"}
           ],
           "outArguments": [],
-          "url": "https://enf2nb6d0hy7tgx.m.pipedream.net",
+          "url": "https://enf2nb6d0hy7tgx.m.pipedream.net"
         }
     },
     "configurationArguments": {
