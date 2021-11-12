@@ -6,6 +6,7 @@ const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var util = require('util');
 var http = require('https');
+var request = require('request');
 
 exports.logExecuteData = [];
 
@@ -123,7 +124,6 @@ exports.execute = function (req, res) {
     console.log("EXECUTE FUNCTION START")
     console.log("=======================")
     // decoded in arguments
-    var request = require('request');
     var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
 
 
