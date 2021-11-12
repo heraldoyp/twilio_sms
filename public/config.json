@@ -21,13 +21,12 @@
             {"LastName": "{{Contact.Attribute.WelcomeProgramJourney.LastName}}"}
           ],
           "outArguments": [],
-          "url": "https://enqsqv7e3qryg5n.m.pipedream.net",
+          "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/execute",
           "verb": "POST",
           "body": "",
           "header": "",
           "format": "json",
-          "useJwt": false,
-          "timeout": 10000
+          "useJwt": false
         }
     },
     "configurationArguments": {
