@@ -22,11 +22,6 @@
           ],
           "outArguments": [],
           "url": "https://enf2nb6d0hy7tgx.m.pipedream.net",
-          "verb": "POST",
-          "body": "",
-          "header": "",
-          "format": "json",
-          "useJwt": false
         }
     },
     "configurationArguments": {
