@@ -62,27 +62,27 @@ define([
 
         console.log(inArguments);
 
-        $.each(inArguments, function (index, inArgument) {
-            $.each(inArgument, function (key, val) {
-                // Your image content that you willing to sent
-                // if (key === 'postcardURL'){
-                //     $('#postcard-url').val(val);
-                //     $('.postcard-preview-content').css('background-image', 'url')
-                // }
+        // $.each(inArguments, function (index, inArgument) {
+        //     $.each(inArgument, function (key, val) {
+        //         // Your image content that you willing to sent
+        //         // if (key === 'postcardURL'){
+        //         //     $('#postcard-url').val(val);
+        //         //     $('.postcard-preview-content').css('background-image', 'url')
+        //         // }
 
-                // if (key === 'postcardText'){
-                //     $('#postcard-text').val(val);
-                //     $('#postcard-preview-text').html($('#postcard-text').val());
-                // }
-                if (key === 'phoneNumberValue'){
-                    $('#form-element-01').val(val);
-                }
+        //         // if (key === 'postcardText'){
+        //         //     $('#postcard-text').val(val);
+        //         //     $('#postcard-preview-text').html($('#postcard-text').val());
+        //         // }
+        //         if (key === 'phoneNumberValue'){
+        //             $('#form-element-01').val(val);
+        //         }
 
-                if(key === 'messageValue'){
-                    $('#textarea-id-01').val(val);
-                }
-            });
-        });
+        //         if(key === 'messageValue'){
+        //             $('#textarea-id-01').val(val);
+        //         }
+        //     });
+        // });
 
         connection.trigger('updateButton', {
             button: 'next',
