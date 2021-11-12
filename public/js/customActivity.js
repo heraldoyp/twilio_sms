@@ -60,8 +60,6 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log(inArguments);
-
         // $.each(inArguments, function (index, inArgument) {
         //     $.each(inArgument, function (key, val) {
         //         // Your image content that you willing to sent
@@ -83,6 +81,18 @@ define([
         //         }
         //     });
         // });
+
+        var hasOutArguments = Boolean(
+            payload['arguments'] &&
+            payload['arguments'].execute &&
+            payload['arguments'].execute.outArguments &&
+            payload['arguments'].execute.outArguments.length > 0
+        );
+
+        var outArguments = hasOutArguments ? payload['arguments'].execute.outArguments : {};
+        
+        console.log(inArguments);
+        console.log(outArguments);
 
         connection.trigger('updateButton', {
             button: 'next',
@@ -116,6 +126,14 @@ define([
             "FirstName": "{{Contact.Attribute.WelcomeProgramJourney.FirstName}}",
             "LastName": "{{Contact.Attribute.WelcomeProgramJourney.LastName}}"
         }];
+
+        payload['arguments'].execute.outArguments = [{
+            "ContactKey": "{{Contact.Key}}",
+            "FirstName": "{{Contact.Attribute.WelcomeProgramJourney.FirstName}}",
+            "LastName": "{{Contact.Attribute.WelcomeProgramJourney.LastName}}",
+            "Mobile": "{{Contact.Attribute.WelcomeProgramJourney.Mobile}}",
+            "Sent": true
+        }]
         
         payload['metaData'].isConfigured = true;
 
