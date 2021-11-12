@@ -17,8 +17,8 @@
         "execute": {
           "inArguments":[
             {"contactKey": "{{Contact.Key}}"},
-            {"FirstName": "{{Contact.Attribute.JourneyEntrySource.FirstName}}"},
-            {"LastName": "{{Contact.Attribute.JourneyEntrySource.LastName}}"}
+            {"FirstName": "{{Contact.Attribute.WelcomeProgramJourney.FirstName}}"},
+            {"LastName": "{{Contact.Attribute.WelcomeProgramJourney.LastName}}"}
           ],
           "outArguments": [],
           "url": "https://enqsqv7e3qryg5n.m.pipedream.net",
@@ -26,7 +26,7 @@
           "body": "",
           "header": "",
           "format": "json",
-          "useJwt": true,
+          "useJwt": false,
           "timeout": 10000
         }
     },
@@ -35,22 +35,22 @@
       "save": {
         "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/save",
           "verb": "POST",
-        "useJwt": true
+        "useJwt": false
        },
        "publish": {
         "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
-        "useJwt": true
+        "useJwt": false
        },
       "stop": {
         "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
-        "useJwt": true
+        "useJwt": false
       },
       "validate": {
         "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
-        "useJwt": true
+        "useJwt": false
       }
     },
     "wizardSteps": [
