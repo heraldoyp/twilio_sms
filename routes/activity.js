@@ -134,7 +134,7 @@ exports.execute = function (req, res) {
     //         console.log(body);
     //     }
     // })
-
+    console.log("EXECUTE FUNCTION =>")
     console.log(req.body)
     logData(req);
     res.send(200, 'Execute');
