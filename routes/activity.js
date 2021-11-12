@@ -124,8 +124,7 @@ exports.execute = function (req, res) {
     console.log("EXECUTE FUNCTION START")
     console.log("=======================")
     // decoded in arguments
-    var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
-
+    var url = "https://enf2nb6d0hy7tgx.m.pipedream.net"
 
     request({
         uri: url, 
