@@ -120,6 +120,8 @@ exports.execute = function (req, res) {
     //     "messageValue": ((req.body)? req.body.messageValue : document.getElementsById("textarea-id-01").value())
     // }
 
+    console.log("EXECUTE FUNCTION START")
+    console.log("=======================")
     // decoded in arguments
     // var request = require('request');
     // var url = "https://enqsqv7e3qryg5n.m.pipedream.net"
@@ -134,9 +136,11 @@ exports.execute = function (req, res) {
     //         console.log(body);
     //     }
     // })
-    console.log("EXECUTE FUNCTION =>")
+
     console.log(req.body)
     logData(req);
+    console.log("=======================")
+    console.log("EXECUTE FUNCTION STOP")
     res.send(200, 'Execute');
 };
 
