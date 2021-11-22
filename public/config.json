@@ -17,8 +17,8 @@
         "execute": {
           "inArguments":[
             {"contactKey": "{{Contact.Key}}"},
-            {"FirstName": "{{Contact.Attribute.eventDefinitionKey.FirstName}}"},
-            {"LastName": "{{Contact.Attribute.eventDefinitionKey.LastName}}"}
+            {"FirstName": "{{Contact.Attribute.FirstName}}"},
+            {"LastName": "{{Contact.Attribute.LastName}}"}
           ],
           "outArguments": [],
           "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/execute",
