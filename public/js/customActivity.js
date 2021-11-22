@@ -123,14 +123,14 @@ define([
             "phoneNumberValue": phoneNumberValue,
             "messageValue": messageValue,
             "ContactKey": "{{Contact.Key}}",
-            "FirstName": "{{Contact.Attribute.FirstName}}",
-            "LastName": "{{Contact.Attribute.LastName}}"
+            "FirstName": "{{Event.eventDefinitionKey.FirstName}}",
+            "LastName": "{{Event.eventDefinitionKey.LastName}}"
         }];
 
         payload['arguments'].execute.outArguments = [{
             "ContactKey": "{{Contact.Key}}",
-            "FirstName": "{{Contact.Attribute.FirstName}}",
-            "LastName": "{{Contact.Attribute.LastName}}",
+            "FirstName": "{{Event.eventDefinitionKey.FirstName}}",
+            "LastName": "{{Event.eventDefinitionKey.LastName}}",
             "Mobile": phoneNumberValue,
             "Sent": true
         }]
