@@ -125,7 +125,7 @@ define([
             "ContactKey": "{{Contact.Key}}",
             "FirstName": "{{Contact.Default.FirstName}}",
             "LastName": "{{Contact.Default.LastName}}"
-        }];
+        }];C
 
         payload['arguments'].execute.outArguments = [{
             "ContactKey": "{{Contact.Key}}",
