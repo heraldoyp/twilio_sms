@@ -123,8 +123,8 @@ define([
             "phoneNumberValue": phoneNumberValue,
             "messageValue": messageValue,
             "ContactKey": "{{Contact.Key}}",
-            "FirstName": "{{Contact.Default.FirstName}}",
-            "LastName": "{{Contact.Default.LastName}}"
+            "FirstName": "{{Contact.Attribute.WelcomeProgramJourney.FirstName}}",
+            "LastName": "{{Contact.Attribute.WelcomeProgramJourney.LastName}}"
         }];C
 
         payload['arguments'].execute.outArguments = [{
