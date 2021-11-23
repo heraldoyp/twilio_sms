@@ -8,6 +8,7 @@ define([
     var connection = new Postmonger.Session();
     var authTokens = {};
     var payload = {};
+    var eventDefinitionKey;
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
@@ -45,6 +46,7 @@ define([
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
         eventDefinitionModel = JSON.stringify(JSON.parse(eventDefinitionModel), null, 2)
+        eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
         console.log("EVENT DEFINITION"+eventDefinitionModel);
     }
 
@@ -143,7 +145,7 @@ define([
 
         console.log("Phone Number "+phoneNumberValue)
         console.log("Message "+messageValue)
-        console.log("Payload"+ payload);
+        console.log("Payload"+ JSON.stringify(JSON.parse(payload),null,2));
         connection.trigger('updateActivity', payload);
     }
 
