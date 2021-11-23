@@ -32,17 +32,17 @@ define([
 
     function onRequestedDataSources(dataSources){
         console.log('*** requestedDataSources ***');
-        console.log(dataSources);
+        console.log("DATA SOURCE => "+dataSources);
     }
 
     function onRequestedInteraction (interaction) {    
         console.log('*** requestedInteraction ***');
-        console.log(interaction);
+        console.log("INTERACTION =>"+interaction);
      }
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
-        console.log(eventDefinitionModel);
+        console.log("EVENT DEFINITION"+eventDefinitionModel);
     }
 
     function initialize(data) {
