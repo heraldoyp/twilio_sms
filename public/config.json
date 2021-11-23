@@ -15,11 +15,7 @@
     },
     "arguments": {
         "execute": {
-          "inArguments":[
-            {"contactKey": "{{Contact.Key}}"},
-            {"FirstName": "{{InteractionDefaults.FirstName}}"},
-            {"LastName": "{{InteractionDefaults.LastName}}"}
-          ],
+          "inArguments":[],
           "outArguments": [],
           "url": "https://devstud-journey-builder.herokuapp.com/journeybuilder/execute",
           "verb": "POST",

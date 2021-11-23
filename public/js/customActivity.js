@@ -116,6 +116,7 @@ define([
 
         var phoneNumberValue = $('#form-element-01').val();
         var messageValue = $('#textarea-id-01').val();
+        var dataExtension = "WelcomeProgramJourney_2"
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
@@ -123,14 +124,14 @@ define([
             "phoneNumberValue": phoneNumberValue,
             "messageValue": messageValue,
             "ContactKey": "{{Contact.Key}}",
-            "FirstName": "{{InteractionDefaults.FirstName}}",
-            "LastName": "{{InteractionDefaults.LastName}}"
+            "FirstName": "{{Contact.Attribute."+dataExtension+".FirstName}}",
+            "LastName": "{{Contact.Attribute."+dataExtension+".LastName}}"
         }];
 
         payload['arguments'].execute.outArguments = [{
             "ContactKey": "{{Contact.Key}}",
-            "FirstName": "{{InteractionDefaults.FirstName}}",
-            "LastName": "{{InteractionDefaults.LastName}}",
+            "FirstName": "{{Contact.Attribute."+dataExtension+".FirstName}}",
+            "LastName": "{{Contact.Attribute."+dataExtension+".LastName}}",
             "Mobile": phoneNumberValue,
             "Sent": true
         }]
