@@ -32,16 +32,19 @@ define([
 
     function onRequestedDataSources(dataSources){
         console.log('*** requestedDataSources ***');
+        dataSources = JSON.stringify(dataSources)
         console.log("DATA SOURCE => "+dataSources);
     }
 
     function onRequestedInteraction (interaction) {    
         console.log('*** requestedInteraction ***');
+        interaction = JSON.stringify(interaction)
         console.log("INTERACTION =>"+interaction);
      }
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
+        eventDefinitionModel = JSON.stringify(eventDefinitionModel)
         console.log("EVENT DEFINITION"+eventDefinitionModel);
     }
 
