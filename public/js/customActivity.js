@@ -33,19 +33,19 @@ define([
 
     function onRequestedDataSources(dataSources){
         console.log('*** requestedDataSources ***');
-        dataSources = JSON.stringify(dataSources)
+        // dataSources = JSON.stringify(dataSources)
         console.log("DATA SOURCE => "+dataSources);
     }
 
     function onRequestedInteraction (interaction) {    
         console.log('*** requestedInteraction ***');
-        interaction = JSON.stringify(interaction)
+        // interaction = JSON.stringify(interaction)
         console.log("INTERACTION =>"+interaction);
      }
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
-        eventDefinitionModel = JSON.stringify(JSON.parse(eventDefinitionModel), null, 2)
+        // eventDefinitionModel = JSON.stringify(JSON.parse(eventDefinitionModel), null, 2)
         eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
         console.log("EVENT DEFINITION"+eventDefinitionModel);
     }
