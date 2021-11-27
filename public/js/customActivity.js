@@ -65,27 +65,28 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        // $.each(inArguments, function (index, inArgument) {
-        //     $.each(inArgument, function (key, val) {
-        //         // Your image content that you willing to sent
-        //         // if (key === 'postcardURL'){
-        //         //     $('#postcard-url').val(val);
-        //         //     $('.postcard-preview-content').css('background-image', 'url')
-        //         // }
+        $.each(inArguments, function (index, inArgument) {
+            $.each(inArgument, function (key, val) {
+                // Your image content that you willing to sent
+                // if (key === 'postcardURL'){
+                //     $('#postcard-url').val(val);
+                //     $('.postcard-preview-content').css('background-image', 'url')
+                // }
 
-        //         // if (key === 'postcardText'){
-        //         //     $('#postcard-text').val(val);
-        //         //     $('#postcard-preview-text').html($('#postcard-text').val());
-        //         // }
-        //         if (key === 'phoneNumberValue'){
-        //             $('#form-element-01').val(val);
-        //         }
+                // if (key === 'postcardText'){
+                //     $('#postcard-text').val(val);
+                //     $('#postcard-preview-text').html($('#postcard-text').val());
+                // }
 
-        //         if(key === 'messageValue'){
-        //             $('#textarea-id-01').val(val);
-        //         }
-        //     });
-        // });
+                if (key === 'phoneNumberValue'){
+                    $('#form-element-01').val(val);
+                }
+
+                if(key === 'messageValue'){
+                    $('#textarea-id-01').val(val);
+                }
+            });
+        });
 
         var hasOutArguments = Boolean(
             payload['arguments'] &&
@@ -145,7 +146,8 @@ define([
 
         console.log("Phone Number "+phoneNumberValue)
         console.log("Message "+messageValue)
-        console.log("Payload"+ JSON.stringify(JSON.parse(payload),null,2));
+        console.log("Payload "+payload)
+        //console.log("Payload"+ JSON.stringify(JSON.parse(payload),null,2));
         connection.trigger('updateActivity', payload);
     }
 
