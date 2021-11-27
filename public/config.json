@@ -28,7 +28,7 @@
     },
     "configurationArguments": {
       "save": {
-        "url": "https://whastapp-journey-builder.herokuapp.com/journeybuilder/save",
+        "url": "https://whatsapp-journey-builder.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": false
        },
