@@ -90,7 +90,7 @@ exports.execute = function (req, res) {
      
     client.messages 
       .create({ 
-          body: 'Hello! This is an editable text message. You are free to change it and write whatever you like.', 
+          body: 'Hello! We\'re from BlendMedia. You are free to change it and write whatever you like.', 
           from: 'whatsapp:+14155238886',       
           to: 'whatsapp:+6285719752942' 
         }) 
