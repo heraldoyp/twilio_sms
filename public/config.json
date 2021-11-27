@@ -1,15 +1,15 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-        "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
+        "icon": "images/whatsapp_icon.png",
+        "iconSmall": "images/whatsapp_icon.png",
         "category": "message"
     },
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Blendmedia SMS",
-          "description": "A Template for a custom Journey Builder activity",
+            "name": "Blendmedia Whatsapp",
+          "description": "A Template for Whatsapp API",
           "step1Label": "Configure Activity"
         }
     },

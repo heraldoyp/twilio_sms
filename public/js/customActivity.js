@@ -33,13 +33,13 @@ define([
 
     function onRequestedDataSources(dataSources){
         console.log('*** requestedDataSources ***');
-        dataSources = JSON.stringify(JSON.parse(dataSources), null, 2)
+        dataSources = JSON.stringify(dataSources)
         console.log("DATA SOURCE => "+dataSources);
     }
 
     function onRequestedInteraction (interaction) {    
         console.log('*** requestedInteraction ***');
-        interaction = JSON.stringify(JSON.parse(interaction), null, 2)
+        interaction = JSON.stringify(interaction)
         console.log("INTERACTION =>"+interaction);
      }
 

@@ -80,61 +80,22 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
 
-    // // example on how to decode JWT
-    // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-
-    //     // verification error -> unauthorized request
-    //     if (err) {
-    //         console.error(err);
-    //         return res.status(401).end();
-    //     }
-
-    //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
-    //         // decoded in arguments
-    //         var decodedArgs = decoded.inArguments[0];
-    //         var request = require('request');
-    //         var url = "https://enag93vjxmdn36p.m.pipedream.net"
-
-    //         request({
-    //             uri: url, 
-    //             method: 'POST',
-    //             json: decodedArgs
-    //         }, function(error, response, body){
-    //             if(!error){
-    //                 console.log(body);
-    //             }
-    //         })
-            
-    //         // Debug attributes code
-    //     } else {
-    //         console.error('inArguments invalid.');
-    //         return res.status(400).end();
-    //     }
-    // });
-
-    // var phoneNumberValue = document.getElementsById("form-element-01").value();
-    // var messageValue =  document.getElementsById("textarea-id-01").value();
-
-    // var bodyData = {
-    //     "phoneNumberValue": ((req.body)? req.body.phoneNumberValue : document.getElementsById("form-element-01").value() ),
-    //     "messageValue": ((req.body)? req.body.messageValue : document.getElementsById("textarea-id-01").value())
-    // }
-
     console.log("EXECUTE FUNCTION START")
     console.log("=======================")
+    
     // decoded in arguments
-    var url = "https://enf2nb6d0hy7tgx.m.pipedream.net"
-
-    request({
-        uri: url, 
-        method: 'POST',
-        json: req.body
-    }, function(error, response, body){
-        if(!error){
-            console.log(body);
-        }
-    })
+    const accountSid = 'ACb494ea5723f3f2f591bbc092b094d41d'; 
+    const authToken = '922353ff86ab2d2b8289d7c7fcf9f78d'; 
+    const client = require('twilio')(accountSid, authToken); 
+     
+    client.messages 
+      .create({ 
+          body: 'Hello! This is an editable text message. You are free to change it and write whatever you like.', 
+          from: 'whatsapp:+14155238886',       
+          to: 'whatsapp:+6285719752942' 
+        }) 
+      .then(message => console.log(message.sid)) 
+      .done();    
 
     console.log(req.body)
     logData(req);
@@ -142,7 +103,6 @@ exports.execute = function (req, res) {
     console.log("EXECUTE FUNCTION STOP")
     res.send(200, 'Execute');
 };
-
 
 /*
  * POST Handler for /publish/ route of Activity.
