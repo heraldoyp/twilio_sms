@@ -17,7 +17,7 @@
         "execute": {
           "inArguments":[],
           "outArguments": [],
-          "url": "https://whastapp-journey-builder.herokuapp.com/journeybuilder/execute",
+          "url": "https://whatsapp-journey-builder.herokuapp.com/journeybuilder/execute",
           "verb": "POST",
           "body": "",
           "header": "",
