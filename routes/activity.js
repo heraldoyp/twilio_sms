@@ -84,18 +84,19 @@ exports.execute = function (req, res) {
     console.log("=======================")
     
     // decoded in arguments
-    const accountSid = 'ACb494ea5723f3f2f591bbc092b094d41d'; 
-    const authToken = '922353ff86ab2d2b8289d7c7fcf9f78d'; 
-    const client = require('twilio')(accountSid, authToken); 
-     
-    client.messages 
-      .create({ 
-          body: 'Hello! We\'re from BlendMedia. You are free to change it and write whatever you like.', 
-          from: 'whatsapp:+14155238886',       
-          to: 'whatsapp:+6285719752942' 
-        }) 
-      .then(message => console.log(message.sid)) 
-      .done();    
+    const accountSid = 'ACcbdb2561997bb8a86fa4c812153574ff'; // Your Account SID from www.twilio.com/console
+    const authToken = '85e1fe98ccfa0b55cd44227bdcd9fb7d'; // Your Auth Token from www.twilio.com/console
+
+    const twilio = require('twilio');
+    const client = new twilio(accountSid, authToken);
+
+    client.messages
+    .create({
+        body: 'Hello World!',
+        to: '+6282298524375', // Text this number
+        from: '+12264005444', // From a valid Twilio number
+    })
+    .then((message) => console.log(message.sid));
 
     console.log(req.body)
     logData(req);
